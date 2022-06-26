@@ -1,0 +1,4 @@
+stack new tareaCommerce https://github.com/10Pines/pdepreludat/releases/download/2.1.6/pdepreludat.hsfiles
+
+TOKEN PDEP
+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
