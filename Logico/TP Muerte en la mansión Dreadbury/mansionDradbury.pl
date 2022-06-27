@@ -4,8 +4,7 @@ viveEnLaMansion(charles).
 
 odia(tiaAgata, Persona) :-
 	viveEnLaMansion(Persona),
-	Persona \= mayordomo,
-	Persona \= tiaAgata.
+	Persona \= mayordomo.
 
 odia(mayordomo, Persona) :-
 	odia(tiaAgata, Persona).
@@ -27,7 +26,8 @@ mata(Asesino, Victima) :-
 %	Punto 1
 
 % ?- mata(Asesino, tiaAgata).
-% Asesino = charles.
+% Asesino = tiaAgata ;
+% false.
 
 %	Punto 2
 
@@ -37,27 +37,35 @@ mata(Asesino, Victima) :-
 
 % A quién odia charles.
 % ?- odia(charles, Persona).       
-% Persona = tiaAgata ;
 % Persona = mayordomo ;
+% false.
 
 % El nombre de quien odia a tía Ágatha.
 % ?- odia(Persona, tiaAgata).      
-% Persona = charles.
+% Persona = tiaAgata ;
+% Persona = mayordomo ;
+% false.
 
 % Todos los odiadores y sus odiados.
-% ?- odia(Odiador, Odiado).   
+% ?- odia(Odiador, Odiado).
+% Odiador = Odiado,
+% Odiado = tiaAgata ;
+
 % Odiador = tiaAgata,
 % Odiado = charles ;
+
+% Odiador = mayordomo,
+% Odiado = tiaAgata ;
 
 % Odiador = mayordomo,
 % Odiado = charles ;
 
 % Odiador = charles,
-% Odiado = tiaAgata ;
-
-% Odiador = charles,
 % Odiado = mayordomo ;
+
+% false.
 
 % Si es cierto que el mayordomo odia a alguien.
 % ?- odia(mayordomo, _).      
+% true ;
 % true.
